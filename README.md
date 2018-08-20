@@ -1,5 +1,4 @@
-# Project-Management-BoldStudio
-Web Project Management Bold Studio
+﻿# Project-Management-BoldStudio
 
 
 Fitur Web untuk User (Pendaftaran):
