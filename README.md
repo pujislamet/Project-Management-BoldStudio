@@ -1,7 +1,6 @@
 # Project-Management-BoldStudio
 Web Project Management Bold Studio
 
-Management Proyek Bold Studio
 
 Fitur Web untuk User (Pendaftaran):
 - Registrasi User
