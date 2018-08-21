@@ -26,6 +26,7 @@ CREATE TABLE `detail_apply` (
   `username` varchar(50) DEFAULT NULL,
   `kategori_id` int(11) DEFAULT NULL,
   `peran_id` int(11) DEFAULT NULL,
+  `approval` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,11 +39,11 @@ DROP TABLE IF EXISTS `history_apply`;
 CREATE TABLE `history_apply` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kode_apply` varchar(50) DEFAULT NULL,
-  `status_apply` int(11) DEFAULT NULL,
-  `status_pembayaran` int(11) DEFAULT NULL,
-  `sudah_dijadwalkan` int(11) DEFAULT NULL,
+  `status_pembayaran` int(11) DEFAULT '0',
+  `sudah_dijadwalkan` int(11) DEFAULT '0',
   `file` text,
   `tanggal_apply` datetime DEFAULT NULL,
+  `tanggal_surat_kontrak` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -70,7 +71,7 @@ CREATE TABLE `kategori` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `kategori` varchar(50) DEFAULT NULL,
   `deskripsi` text,
-  `multiple` int(11) DEFAULT NULL,
+  `multiple` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -90,6 +91,7 @@ CREATE TABLE `peran` (
   `suara_dibutuhkan` int(11) DEFAULT NULL,
   `estimasi_rekaman` int(11) DEFAULT NULL,
   `fee` int(11) DEFAULT NULL,
+  `terisi` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
